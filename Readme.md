@@ -1,1 +1,1 @@
-# WIP: Deploying ML for trading recomendations
+# WIP: Deploying ML for trading recommendations
