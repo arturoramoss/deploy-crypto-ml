@@ -35,7 +35,8 @@ class ModelConfig(BaseModel):
     features: List[str]
     test_size: float
     random_state: int
-    alpha: float
+    C: float
+    class_weight: str
     
 
 
