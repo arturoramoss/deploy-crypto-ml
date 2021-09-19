@@ -27,7 +27,7 @@ def make_prediction(
             X=validated_data[config.model_config.features]
         )
         results = {
-            "predictions": predictions,  # type: ignore
+            "predictions": predictions.tolist(),  # type: ignore
             "version": _version,
             "errors": errors,
         }
