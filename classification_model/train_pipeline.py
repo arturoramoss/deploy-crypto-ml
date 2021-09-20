@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 from config.core import config
 from pipeline import trade_pipe
 from processing.data_manager import load_dataset, save_pipeline

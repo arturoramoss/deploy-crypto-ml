@@ -1,5 +1,7 @@
 from pathlib import Path
-from typing import Dict, List, Sequence
+
+# from typing import Dict, List, Sequence
+from typing import List
 
 from pydantic import BaseModel
 from strictyaml import YAML, load
@@ -37,7 +39,6 @@ class ModelConfig(BaseModel):
     random_state: int
     C: float
     class_weight: str
-    
 
 
 class Config(BaseModel):

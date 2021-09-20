@@ -16,18 +16,17 @@ from sklearn.preprocessing import StandardScaler
 
 from classification_model.config.core import config
 
-
-trade_pipe = Pipeline([
-
-    # TODO Add pre-processing steps
-
-
-    ('scaler', StandardScaler()),
-
-    ('Logistic Regression', 
-    LogisticRegression(
-        C = config.model_config.C,
-        class_weight = config.model_config.class_weight, 
-        random_state = config.model_config.random_state
-    )),
-])
+trade_pipe = Pipeline(
+    [
+        # TODO Add pre-processing steps
+        ("scaler", StandardScaler()),
+        (
+            "Logistic Regression",
+            LogisticRegression(
+                C=config.model_config.C,
+                class_weight=config.model_config.class_weight,
+                random_state=config.model_config.random_state,
+            ),
+        ),
+    ]
+)

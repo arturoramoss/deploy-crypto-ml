@@ -15,7 +15,6 @@ def drop_na_inputs(*, input_data: pd.DataFrame) -> pd.DataFrame:
         for var in config.model_config.features
         if validated_data[var].isnull().sum() > 0
         # and var not in config.model_config.categorical_vars_with_na_frequent
-        
     ]
     validated_data.dropna(subset=new_vars_with_na, inplace=True)
 
@@ -27,7 +26,7 @@ def validate_inputs(*, input_data: pd.DataFrame) -> Tuple[pd.DataFrame, Optional
 
     # Add relevant replacement or fiel renaming
     relevant_data = input_data[config.model_config.features].copy()
-    validated_data = relevant_data # drop_na_inputs(input_data=relevant_data)
+    validated_data = relevant_data  # drop_na_inputs(input_data=relevant_data)
     errors = None
 
     try:

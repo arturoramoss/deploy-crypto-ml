@@ -5,6 +5,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 # Classes not use but might use as syntax reference in future
 
+
 class TemporalVariableTransformer(BaseEstimator, TransformerMixin):
     """Temporal elapsed time transformer."""
 
